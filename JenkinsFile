@@ -9,5 +9,10 @@ pipeline {
         sh 'jar -cvmf MANIFEST.MF ractangle.jar *.class'
       }
     }
+    stage('run') {
+      steps {
+        sh 'java -jar rectangle.jar 9 7'
+      }
+    }
   }
 }
